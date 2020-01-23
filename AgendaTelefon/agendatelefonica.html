@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Agenda telefonica</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesagenda.css">
+        <script src="agenda.js"></script>
+	</head>
+	<body onload="draw()">
+        <div class="agenda">
+            <span class="title">Agenda</span>
+            <div class="yellow">
+            <form onsubmit="add(event);">
+                <label for="nume">Nume:</label>
+                <input type="text" id="nume" name="contactName"></input>
+                <label for="telefon">Telefon:</label>
+                <input type="text" id="telefon" name="telefonContact"></input></br>
+                <input type="submit" id="adauga" value="Adauga Contact"></input>
+             </form>
+             </div>
+            <div class="displayContact yellow hidden">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nume</th>
+                            <th>Telefon</th>
+                            <th style="width:100px;"></th>
+                            <th style="width:100px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</body>
+</html>

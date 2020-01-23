@@ -1,0 +1,62 @@
+body, html{
+
+    width: 100%;
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+  }
+  .agenda{
+    width: 45%;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 40px; 
+    text-align: center;
+  }
+  .title{
+      font-size: 30px; 
+      font-weight: bold; 
+      
+  }
+  form{
+      margin-top: 20px; 
+      margin-bottom: 20px;
+      padding-top: 20px; 
+      padding-bottom: 20px; 
+  }
+  .yellow{
+      background-color: #ffd700;
+  }
+  #adauga{
+
+    margin-top: 10px; 
+    padding: 7px; 
+    background-color: #3b5998; 
+    border: none;
+    color: white; 
+    border-radius: 4px; 
+  }
+  #tableButtons{
+    border: none;
+    background-color: #ffd700;; 
+    text-decoration: underline; 
+    color: #8B008B; 
+  }
+  .displayContact{
+      font-size: 20px; 
+      padding-top: 20px; 
+      padding-bottom: 20px; 
+  }
+  td{
+      padding-left: 30px; 
+      padding-right: 30px; 
+  }
+  table{
+    width:30%; 
+    margin-right:auto;
+    margin-left:auto;
+    
+  }
+ .hidden{
+     display: none; 
+ }
