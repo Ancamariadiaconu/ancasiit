@@ -41,6 +41,8 @@ body, html{
     background-color: #ffd700;; 
     text-decoration: underline; 
     color: #8B008B; 
+    cursor: pointer;
+    outline: none; 
   }
   .displayContact{
       font-size: 20px; 
