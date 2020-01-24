@@ -10,11 +10,11 @@
         <div class="agenda">
             <span class="title">Agenda</span>
             <div class="yellow">
-            <form onsubmit="add(event);">
+            <form onsubmit="add(event);"  onkeypress="keyDefault(event);">
                 <label for="nume">Nume:</label>
                 <input type="text" id="nume" name="contactName"></input>
                 <label for="telefon">Telefon:</label>
-                <input type="text" id="telefon" name="telefonContact" onkey.press="add(event);"></input></br>
+                <input type="text" id="telefon" name="telefonContact" onkeypress="addInput(event);"></input></br>
                 <input type="submit" id="adauga" value="Adauga Contact"></input>
              </form>
              </div>
