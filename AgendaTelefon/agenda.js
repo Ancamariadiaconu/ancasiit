@@ -52,3 +52,33 @@ function del(idx){
     }
 
 }
+function keyDefault(event){
+    if(event.key === "Enter") {
+        event.preventDefault();
+    }
+}
+function addInput(event){
+   
+ 
+    if(event.key === "Enter"){
+        
+        var newContact={
+          name: document.querySelector("[name='contactName']").value,
+          telefon: document.querySelector("[name='telefonContact']").value
+       
+        }
+        if(indexEdit===undefined){
+         list.push(newContact);
+       
+        }
+        else{
+           list[indexEdit]=newContact;
+           window.indexEdit= undefined;
+        }
+         draw();
+         document.querySelector("div.displayContact").classList.remove("hidden");
+
+    
+}
+
+}
