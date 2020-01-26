@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lista cumparaturi</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="lista.css">
+        <script src="lista.js"></script>
+	</head>
+	<body onload="draw()">
+        <div class="shoppingList">
+            <div class="addItems">
+                <span class="title">Shopping List</span>
+                <form onsubmit="add(event);">
+                    <input type="text" name="product" class="inputProduct"></input>
+                    <button type="submit" class="add">Add Item</button>
+                </form>
+                <button onclick="sortAsc(event);" class="violet ">Sort Asc</button>
+                <button onclick="sortDesc(event);" class="violet ">Sort Desc</button>
+            </div>
+            <div class="displayItems hidden">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+	</body>
+</html>
