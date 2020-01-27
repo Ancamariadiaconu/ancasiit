@@ -19,11 +19,15 @@ function draw(){
 
 function add(event){
    event.preventDefault();
-   var newContact={
-   name: document.querySelector("[name='contactName']").value,
-   telefon: document.querySelector("[name='telefonContact']").value
+    var numeContact=document.querySelector("[name='contactName']").value;
+    var telefonContact=document.querySelector("[name='telefonContact']").value;
 
-    }
+    if(numeContact.length>0 && telefonContact.length>0){
+     var newContact={
+     name: numeContact, 
+     telefon: telefonContact
+
+      }
     if(indexEdit===undefined){
     list.push(newContact);
 
@@ -40,6 +44,7 @@ function edit(idx){
     document.querySelector("[name='telefonContact']").value=list[idx].telefon;
     window.indexEdit = idx;
 
+ }
 }
 function del(idx){
     if(confirm("Esti sigur ca vrei sa stergi acest contact?")){
@@ -54,12 +59,14 @@ function keyDefault(event){
     }
 }
 function addInput(event){
-   
+    var numeContact=document.querySelector("[name='contactName']").value;
+    var telefonContact=document.querySelector("[name='telefonContact']").value;
+   if(numeContact.length>0 && telefonContact.length>0){
     if(event.key === "Enter"){
         
         var newContact={
-          name: document.querySelector("[name='contactName']").value,
-          telefon: document.querySelector("[name='telefonContact']").value
+          name: numeContact,
+          telefon: telefonContact
        
         }
         if(indexEdit===undefined){
@@ -74,4 +81,5 @@ function addInput(event){
          document.querySelector("div.displayContact").classList.remove("hidden");    
      }
 
+}
 }
