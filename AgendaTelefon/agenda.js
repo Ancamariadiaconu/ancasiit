@@ -41,6 +41,8 @@ function add(event){
  }
   draw();
   document.querySelector("div.displayContact").classList.remove("hidden");
+     document.querySelector("[name='contactName']").value=""; 
+     document.querySelector("[name='telefonContact']").value=""; 
  }
 }
 function edit(idx){
@@ -83,6 +85,8 @@ function addInput(event){
             }
          draw();
          document.querySelector("div.displayContact").classList.remove("hidden");
+         document.querySelector("[name='contactName']").value=""; 
+         document.querySelector("[name='telefonContact']").value=""; 
 
         }
     }
