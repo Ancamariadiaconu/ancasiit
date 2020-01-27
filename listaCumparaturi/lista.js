@@ -24,17 +24,6 @@ function add(event){
    }
 }
 function edit(idx){
-    
-    for(var i=list.length; i>=1;i--){
-        if(!document.querySelector("table tr:nth-child("+(i)+") td:nth-child("+1+")").classList.contains("cut")){
-            temp=list[i];
-            list[i]=list[idx+1];
-            list[idx+1]=temp; 
-            
-        }
-    }
-    
-    draw(); 
     document.querySelector("table tr:nth-child("+(idx+1)+") td:nth-child("+1+")").classList.add("cut");
 }
 function sortAsc(event){
