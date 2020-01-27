@@ -20,17 +20,16 @@ function draw(){
 function add(event){
    event.preventDefault();
     var numeContact=document.querySelector("[name='contactName']").value;
-    var telefonContact=document.querySelector("[name='telefonContact']").value;
+    var telContact=document.querySelector("[name='telefonContact']").value;
 
-    if(numeContact.length>0 && telefonContact.length>0){
+    if(numeContact.length>0 && telContact.length>0){
      var newContact={
      name: numeContact, 
-     telefon: telefonContact
+     telefon: telContact
 
       }
     if(indexEdit===undefined){
     list.push(newContact);
-
     }
     else{
     list[indexEdit]=newContact;
@@ -39,13 +38,14 @@ function add(event){
     draw();
     document.querySelector("div.displayContact").classList.remove("hidden");
      }
+}
 function edit(idx){
     document.querySelector("[name='contactName']").value=list[idx].name;
     document.querySelector("[name='telefonContact']").value=list[idx].telefon;
     window.indexEdit = idx;
 
  }
-}
+
 function del(idx){
     if(confirm("Esti sigur ca vrei sa stergi acest contact?")){
         list.splice(idx,1);
@@ -60,13 +60,13 @@ function keyDefault(event){
 }
 function addInput(event){
     var numeContact=document.querySelector("[name='contactName']").value;
-    var telefonContact=document.querySelector("[name='telefonContact']").value;
-   if(numeContact.length>0 && telefonContact.length>0){
+    var telContact=document.querySelector("[name='telefonContact']").value;
+   if(numeContact.length>0 && telContact.length>0){
     if(event.key === "Enter"){
         
         var newContact={
           name: numeContact,
-          telefon: telefonContact
+          telefon: telContact
        
         }
         if(indexEdit===undefined){
@@ -82,4 +82,4 @@ function addInput(event){
      }
 
 }
-}
+
