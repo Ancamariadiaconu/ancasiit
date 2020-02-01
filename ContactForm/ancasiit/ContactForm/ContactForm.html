@@ -34,9 +34,9 @@
 					document.querySelector("[name='message']").classList.remove("invalid");
 				}
 				if(!document.querySelector("[value='male']").checked && !document.querySelector("[value='female']").checked ){
-				   alert("Nu ati selectat genul!");
+				   document.querySelector(".gender").classList.add("invalid");
 				   }
-				if(!document.querySelector("[name='fName']").classList.contains("invalid") && !document.querySelector("[name='lName']").classList.contains("invalid") && !document.querySelector("[name='message']").classList.contains("invalid")){
+				if(!document.querySelector("[name='fName']").classList.contains("invalid") && !document.querySelector("[name='lName']").classList.contains("invalid") && !document.querySelector("[name='message']").classList.contains("invalid") && !document.querySelector(".gender").classList.contains("invalid")){
 					var nameSpan = document.querySelector("#nameSpan");
                     nameSpan.innerText = firstName;
 					document.querySelector(".hidden").classList.remove("hidden");
