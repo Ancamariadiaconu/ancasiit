@@ -34,8 +34,12 @@
 					document.querySelector("[name='message']").classList.remove("invalid");
 				}
 				if(!document.querySelector("[value='male']").checked && !document.querySelector("[value='female']").checked ){
-				   document.querySelector(".gender").classList.add("invalid");
+				   document.querySelector(".genderSelected").classList.add("invalid");
 				   }
+				else{
+				 document.querySelector(".genderSelected").classList.remove("invalid");
+				
+				}
 				if(!document.querySelector("[name='fName']").classList.contains("invalid") && !document.querySelector("[name='lName']").classList.contains("invalid") && !document.querySelector("[name='message']").classList.contains("invalid") && !document.querySelector(".gender").classList.contains("invalid")){
 					var nameSpan = document.querySelector("#nameSpan");
                     nameSpan.innerText = firstName;
@@ -55,10 +59,10 @@
 						<input type="text" name="fName"/></br>
 						<label for="lname">Last Name</label></br>
             			<input type="text" name="lName"/></br>
-						<label>Gender</label></br>
+						<span class="genderSelected">Gender</span></br>
 				 		<div class="gender">
-						<input type="radio" name="genderType" value="male" ></input></br>
-						<input type="radio" name="genderType" value="female"></input></br>
+						<input type="radio" name="genderType" value="male" >M</input></br>
+						<input type="radio" name="genderType" value="female">F</input></br>
 				 		</div>
             			<textarea placeholder="Your message here" class="text" name="message"></textarea></br>
 						<input type="submit" value="Submit" class="button">
