@@ -29,7 +29,7 @@ function edit(idx){
 function sortAsc(event){
     for (var i = 0; i < list.length; i++) {
     for (var j = 0; j < list.length; j++) {
-        if (list[j].toLowerCase() > list[j + 1].toLowerCase(){
+        if (list[j].toLowerCase() > list[j + 1].toLowerCase()){
              tmp = list[j];
              list[j] = list[j + 1];
              list[j + 1] = tmp;
@@ -41,7 +41,7 @@ function sortAsc(event){
 function sortDesc(event){
   for (var i = 0; i < list.length; i++) {
     for (var j = 0; j < list.length; j++) {
-        if (list[j].toLowerCase() < list[j + 1].toLowerCase() {
+        if (list[j].toLowerCase() < list[j + 1].toLowerCase()) {
              tmp = list[j];
              list[j] = list[j + 1];
              list[j + 1] = tmp;
