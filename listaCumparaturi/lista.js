@@ -2,51 +2,100 @@ var list=[];
 function draw(){
     var str="";
     for(var i=0; i<list.length;i++){
+        if(list[i].strike==="striked"){
         str+=`
             <tr>
-             <td>${list[i]}</td>
+            <td class="cut">${list[i].nume}</td>
              <td><button class="mark" onclick="edit(${i})">Mark as buyed</button></td>
             </tr>
         
         
         `;
+        }
+        else{
+            str+=`
+            <tr>
+            <td>${list[i].nume}</td>
+             <td><button class="mark" onclick="edit(${i})">Mark as buyed</button></td>
+            </tr>
+        
+        
+        `;
+        }
     }
     document.querySelector("table tbody").innerHTML= str;    
 }
 function add(event){
     event.preventDefault();
-    item=document.querySelector("[name='product']").value
-    if(item.length>0){
+    var item={
+        nume: document.querySelector("[name='product']").value,
+        strike: ""
+    };
+    
      list.push(item);
      draw();
      document.querySelector("[name='product']").value=""; 
      document.querySelector("div.displayItems").classList.remove("hidden");
-   }
+   
 }
 function edit(idx){
-    document.querySelector("table tr:nth-child("+(idx+1)+") td:nth-child("+1+")").classList.add("cut");
+    list[idx].strike="striked";
+    draw();
 }
 function sortAsc(event){
-    for (var i = 0; i < list.length; i++) {
-    for (var j = 0; j < list.length; j++) {
-        if (list[j].toLowerCase() > list[j + 1].toLowerCase()){
-             tmp = list[j];
-             list[j] = list[j + 1];
-             list[j + 1] = tmp;
-         }
-      }
-   }
-      draw(); 
+    var arr=[];
+    var strikeEl=[];
+    for(var i=0;i<list.length;i++){
+        if(list[i].strike==="striked"){
+        strikeEl.push(list[i].nume);
+        list[i].strike="";
+        }
+       arr.push(list[i].nume);
+    }
+    arr.sort(function (a, b) {
+        return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+   for(var i=0;i<list.length;i++){
+    list[i].nume=arr[i];
+  }
+  for(var i=0;i<strikeEl.length;i++){
+        for(var j=0;j<list.length;j++){
+            if(strikeEl[i]===list[j].nume){
+                     list[j].strike="striked"
+
+              }
+        }
+
+  }
+   draw();
+      
 }
 function sortDesc(event){
-  for (var i = 0; i < list.length; i++) {
-    for (var j = 0; j < list.length; j++) {
-        if (list[j].toLowerCase() < list[j + 1].toLowerCase()) {
-             tmp = list[j];
-             list[j] = list[j + 1];
-             list[j + 1] = tmp;
+    var arr=[];
+    var strikeEl=[];
+    for(var i=0;i<list.length;i++){
+        if(list[i].strike==="striked"){
+        strikeEl.push(list[i].nume);
+        list[i].strike="";
+        }
+       arr.push(list[i].nume);
+    }
+    arr.sort(function (a, b) {
+        return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+   arr.reverse();
+   for(var i=0;i<list.length;i++){
+    list[i].nume=arr[i];
+  }
+  for(var i=0;i<strikeEl.length;i++){
+        for(var j=0;j<list.length;j++){
+            if(strikeEl[i]===list[j].nume){
+                     list[j].strike="striked"
+
+               }
          }
-      }
-   }
- draw();
+
+  }
+      draw();
+   
 }
