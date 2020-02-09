@@ -1,0 +1,105 @@
+html{
+
+    width: 100%;
+    height: 100%; 
+}
+body{
+
+    width: 80%; 
+    background-color: #AFEEEE; 
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 40px; 
+    padding-bottom: 20px;
+    position: relative;
+    
+  
+}
+.header{
+    padding-left:20px;
+    position: relative;  
+   
+}
+.imagine{
+
+    max-width: 200px; 
+}
+td{
+
+    text-align: left;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+#contact, #menuButton{
+    background-color: #2d81e0; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; ;
+    padding: 10px; 
+    font-size: 15px; 
+    position: absolute; 
+    top:0;
+    right: 0; 
+    margin-top: 30px; 
+    margin-right: 20px; 
+}
+
+.slogan{
+
+    font-size: 35px; 
+    font-weight: bold;
+   
+    
+}
+.search{
+width: 250px; 
+padding: 5px; 
+margin-top: 10px;
+
+}
+#ingredientSearch{
+
+    padding: 5px; 
+    background-color: #9966CC; 
+    border-radius: 5px; 
+    color: white; 
+    margin-left: 5px; 
+}
+.menu{
+
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.detalii{
+
+    font-size: 15px; 
+    padding: 10px; 
+    border-radius: 5px;
+    background-color: #DB7093; 
+    color: white; 
+}
+.imagineDetails{
+    width:400px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.numeDetails{
+ font-size: 20px; 
+ font-weight: bold;
+
+}
+.contact{
+
+    max-width: 70%; 
+    padding: 60px; 
+    font-size: 25px; 
+}
+#googleMap{
+    width:100%;
+    height:400px;
+}
+.nume-preparat{
+  font-weight: bold;
+
+}

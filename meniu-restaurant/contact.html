@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Loading</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="menu.css">
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+		<script>
+			function myMap() {
+                var mapProp= {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:5,
+        };
+                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+		</script>
+    </head>
+    <body>
+        <div class="contact">
+            <span class="adresa">Adresa: Strada Emanoil Porumbaru 81, București</span>
+            <a href="menu.html"><button id="menuButton">Menu</button></a></br></br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.4210541960897!2d26.081773015035363!3d44.46554140754021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b202103426eb4b%3A0x65675e628cddb41b!2sStrada%20Emanoil%20Porumbaru%2081%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1580406568331!5m2!1sro!2sro" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            
+
+        </div>
+	</body>
+</html>

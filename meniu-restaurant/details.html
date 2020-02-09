@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Detalii preparat</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="menu.css">
+		<script>
+            var index=window.location.search.substr(4);
+           
+            async function getDetail(){
+				var response = await fetch("https://menu-49210.firebaseio.com/menu.json");
+				window.list = await response.json();
+				draw();
+			}
+            function draw(){
+             var str="";
+        
+					str= `
+					<a href="menu.html"><button id="menuButton">Menu</button></a>
+                    <span class="slogan">Cald si bun</span></br>
+                    <img src="${list[index].imagine}" class="imagineDetails"></img></br>
+                    <span class="numeDetails">${list[index].nume}</span></br></br>
+                    <span>${list[index].ingrediente}<span>
+                    <p>${list[index].reteta}</p>
+					
+					`
+				
+				document.querySelector("body").innerHTML = str;
+			
+           }
+
+		</script>
+    </head>
+    <body onload="getDetail();">
+        
+	</body>
+</html>
