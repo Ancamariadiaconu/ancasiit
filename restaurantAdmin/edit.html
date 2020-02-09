@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adauga o reteta noua</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="add.css">
+        <script src="adminMenu.js"></script>
+		
+    </head>
+    <body onload="afisareInformatiiPreparat();">
+        <div class="adaugarePreparat">
+            <span class="slogan">Cald si bun(Admin)</span></br>
+            <form class="informatiiNoi" onsubmit="salvarePreparat();">
+                <label for="Nume">Nume:</label>
+                <input type="text"  name="nume"/><br>
+                <label for="url">URl imagine:</label>
+                <input type="text" name="url"/><br>
+                <label for="ingrediente">Ingrediente:</label>
+                <input type="text" name="ingrediente"/><br>
+                <label for="preparare">Mod de preparare:</label>
+                <input type="text" name="preparare"/><br>
+                <button type="submit" class="salveazaPreparat">Salveaza preparat</button>
+            </form>
+        </div>
+	</body>
+</html>

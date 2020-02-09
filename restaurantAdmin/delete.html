@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>eliminare Preparat</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="delete.css">
+        <script src="adminMenu.js"></script>
+
+		
+    </head>
+    <body onload="actualizareNumePreparat();">
+        <div class="loader"></div>
+        <div class="stergerePreparat hidden" >
+                <span class="slogan">Cald si bun(Admin)</span></br>
+                <p class="mesaj">Esti pe cale sa stergi preparatul:"<span id="numePreparat"></span>"</p>
+                <p class="mesaj">Confirmi stergerea?</p>
+                <button type="submit" class="confirmare" onclick="confirmareStergere();">Da</button>
+                <button type="submit" class="refuz" onclick="refuzStergere();">Nu</button>
+            
+        </div>
+	</body>
+</html>

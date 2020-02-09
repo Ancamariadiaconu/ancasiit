@@ -1,0 +1,53 @@
+body{
+
+    display: flex; 
+    justify-content: center;
+}
+.stergerePreparat{
+   width: 600px; 
+   background-color: #AFEEEE; 
+   margin-top:50px; 
+   padding: 30px;
+   border-radius: 5px;    
+}
+.slogan{
+
+    font-size: 35px; 
+    font-weight: bold; 
+    color: #550a8a; 
+    
+}
+.mesaj{
+    font-size: 20px; 
+    font-weight: bold;
+}
+.confirmare, .refuz{
+    
+    color: white; 
+    border: none; 
+    border-radius: 5px; ;
+    padding: 10px; 
+    font-size: 15px; 
+    margin-top: 10px;
+
+}
+.confirmare{
+    background-color: #2d81e0; 
+}
+.refuz{
+    background-color:#DB7093; 
+}
+.hidden{
+
+    display: none; 
+}
+.loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid blue;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+  }
+  

@@ -1,0 +1,44 @@
+.slogan{
+
+    font-size: 35px; 
+    font-weight: bold; 
+    color: #550a8a; 
+    
+}
+body{
+
+    display: flex; 
+    justify-content: center;
+}
+.adaugarePreparat {
+   width: 600px; 
+   background-color: #AFEEEE; 
+   margin-top:50px; 
+   padding: 30px;
+   border-radius: 5px;    
+}
+label{
+    display: inline-block; 
+    width: 150px; 
+    font-size: 20px; 
+    margin-bottom: 10px;
+}
+.informatiiNoi{
+
+    margin-top: 20px; 
+}
+input{
+
+    width: 420px; 
+    padding: 5px; 
+}
+.adaugare, .salveazaPreparat{
+    background-color: #2d81e0; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; ;
+    padding: 10px; 
+    font-size: 15px; 
+    margin-top: 10px;
+
+}
