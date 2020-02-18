@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta name="description" content="Components Project - Simple Top Navigation">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Catalog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="catalog.css">
+  <script src="catalog.js"></script>
+</head>
+<div class="container">
+  <div class="lista_elevi_wrapper">
+    <h1>Lista elevi</h1>
+    <form onsubmit="onSubmitAddElev(event);">
+        <label>Nume:</label>
+        <input class="elevNou">
+        <button type="submit">Adauga elev</button>
+    </form>
+    <div class="sortButtons">
+        <button class="sort" onclick="onClickSortAscMedie();">Sorteaza ascendent dupa medie</button>
+        <button class="sort" onclick="onClickSortDescMedie();">Sorteaza descendent dupa medie</button>
+    </div>
+    <table id="elevi">
+        <thead>
+             <tr>
+                <th>Nume</th>
+                <th>Medie note</th>     
+             </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    
+
+    </table>
+  </div>   
+  <div class="note_elev_wrapper hidden">
+        <button onclick="ascundeDivNote();">Ascunde notele</button>
+        <form onsubmit="onSubmitAddNota();">
+            <h1>Nota elev:<span id="numeElev"></span></h1>
+            <label>Nota:</label>
+            <input class="notaNoua" type="number">
+            <button type="submit">Adauga nota</button>
+        </form>
+        <div class="sortButtons">
+        <button class="sort" onclick="onClickSortNoteAsc();">Sorteaza ascendent notele</button>
+        <button class="sort" onclick="onClickSortNoteDesc();">Sorteaza descendent notele </button>
+        </div>
+        <table id="note">
+            <thead>
+            <tr>
+                <th>Nota</th>   
+            </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+            
+    
+        </table>
+
+
+  </div>
+  </div>
+</body>
+</html>
